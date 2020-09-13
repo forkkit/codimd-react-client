@@ -11,6 +11,7 @@ import { YAMLMetaData } from '../yaml-metadata/yaml-metadata'
 
 export interface DocumentRenderPaneProps {
   content: string
+  extraClasses?: string
   onFirstHeadingChange: (firstHeading: string | undefined) => void
   onLineMarkerPositionChanged?: (lineMarkerPosition: LineMarkerPosition[]) => void
   onMetadataChange: (metaData: YAMLMetaData | undefined) => void
@@ -23,6 +24,7 @@ export interface DocumentRenderPaneProps {
 
 export const DocumentRenderPane: React.FC<DocumentRenderPaneProps> = ({
   content,
+  extraClasses,
   onFirstHeadingChange,
   onLineMarkerPositionChanged,
   onMetadataChange,
@@ -37,7 +39,7 @@ export const DocumentRenderPane: React.FC<DocumentRenderPaneProps> = ({
   const realWidth = width || 0
 
   return (
-    <div className={'bg-light flex-fill pb-5 flex-row d-flex w-100 h-100 overflow-y-scroll'}
+    <div className={`bg-light flex-fill pb-5 flex-row d-flex w-100 h-100 ${extraClasses ?? ''}`}
       ref={rendererReference} onScroll={onScrollRenderer} onMouseEnter={onMouseEnterRenderer}>
       <div className={'col-md'}/>
       <div className={'bg-light flex-fill'}>

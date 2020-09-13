@@ -6,6 +6,7 @@ import { DocumentRenderPane, DocumentRenderPaneProps } from './document-render-p
 
 export const ScrollingDocumentRenderPane: React.FC<DocumentRenderPaneProps & ScrollProps> = ({
   content,
+  extraClasses,
   scrollState,
   wide,
   onFirstHeadingChange,
@@ -88,6 +89,7 @@ export const ScrollingDocumentRenderPane: React.FC<DocumentRenderPaneProps & Scr
   return (
     <DocumentRenderPane
       content={content}
+      extraClasses={`overflow-y-scroll ${extraClasses ?? ''}`}
       rendererReference={renderer}
       wide={wide}
       onFirstHeadingChange={onFirstHeadingChange}
