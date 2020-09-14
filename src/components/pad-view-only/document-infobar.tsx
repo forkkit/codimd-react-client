@@ -36,13 +36,11 @@ export const DocumentInfobar: React.FC<DocumentInfobarProps> = ({
       <div className={'d-flex flex-fill'}>
         <div className={'d-flex flex-column'}>
           <DocumentInfoTimeLine
-            isInline={true}
             mode={DocumentInfoLineWithTimeMode.CREATED}
             time={ moment(createdTime) }
             userName={createdAuthor}
             profileImageSrc={'/avatar.png'}/>
           <DocumentInfoTimeLine
-            isInline={true}
             mode={DocumentInfoLineWithTimeMode.EDITED}
             time={ moment(changedTime) }
             userName={changedAuthor}
