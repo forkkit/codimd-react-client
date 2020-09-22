@@ -42,15 +42,18 @@ import { ComponentReplacer } from './replace-components/ComponentReplacer'
 import { CsvReplacer } from './replace-components/csv/csv-replacer'
 import { FlowchartReplacer } from './replace-components/flow/flowchart-replacer'
 import { GistReplacer } from './replace-components/gist/gist-replacer'
+import { GraphvizReplacer } from './replace-components/graphviz/graphviz-replacer'
 import { HighlightedCodeReplacer } from './replace-components/highlighted-fence/highlighted-fence-replacer'
 import { ImageReplacer } from './replace-components/image/image-replacer'
 import { KatexReplacer } from './replace-components/katex/katex-replacer'
+import { MarkmapReplacer } from './replace-components/markmap/markmap-replacer'
 import { MermaidReplacer } from './replace-components/mermaid/mermaid-replacer'
 import { PdfReplacer } from './replace-components/pdf/pdf-replacer'
 import { PossibleWiderReplacer } from './replace-components/possible-wider/possible-wider-replacer'
 import { QuoteOptionsReplacer } from './replace-components/quote-options/quote-options-replacer'
 import { SequenceDiagramReplacer } from './replace-components/sequence-diagram/sequence-diagram-replacer'
 import { TaskListReplacer } from './replace-components/task-list/task-list-replacer'
+import { VegaReplacer } from './replace-components/vega-lite/vega-replacer'
 import { VimeoReplacer } from './replace-components/vimeo/vimeo-replacer'
 import { YoutubeReplacer } from './replace-components/youtube/youtube-replacer'
 import { AdditionalMarkdownRendererProps } from './types'
@@ -93,6 +96,9 @@ export const EnhancedMarkdownRenderer: React.FC<EnhancedMarkdownRendererProps & 
       new CsvReplacer(),
       new FlowchartReplacer(),
       new MermaidReplacer(),
+      new MarkmapReplacer(),
+      new VegaReplacer(),
+      new GraphvizReplacer(),
       new HighlightedCodeReplacer(),
       new QuoteOptionsReplacer(),
       new KatexReplacer(),

@@ -7,7 +7,6 @@ import { LineMarkers, lineNumberMarker } from './markdown-it-plugins/line-number
 import { LinemarkerReplacer } from './replace-components/linemarker/linemarker-replacer'
 import { AdditionalMarkdownRendererProps, LineMarkerPosition } from './types'
 import { useCalculateLineMarkerPosition } from './utils/calculate-line-marker-positions'
-import { useCalculateLineMarkerPosition } from './utils/calculate-line-marker-positions'
 
 export interface FullMarkdownRendererProps {
   onLineMarkerPositionChanged?: (lineMarkerPosition: LineMarkerPosition[]) => void
