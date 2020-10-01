@@ -1,5 +1,5 @@
 import MarkdownIt from 'markdown-it'
-import React, { useCallback, useEffect, useMemo, useRef } from 'react'
+import React, { useCallback, useMemo, useRef } from 'react'
 import { TocAst } from '../../external-types/markdown-it-toc-done-right/interface'
 import { YAMLMetaData } from '../editor/yaml-metadata/yaml-metadata'
 import { EnhancedMarkdownRenderer } from './enhanced-markdown-renderer'
